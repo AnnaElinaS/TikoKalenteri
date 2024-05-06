@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Kesälomakalenteri">
+    <meta name="keywords" content="Kalenteri, TIKO, kesä">
+    <meta name="author" content="Anna, Diana, Eetu, Essi ja Ulduz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ulkoasu.css">
+
+    <title>Kalenteri</title>
+
+</head>
+
+<body>
+    <h1>Kalenteri</h1>
+
+    <div class="grid-container">
+        <!-- Each grid item with customizable modal -->
+        <button class="grid-item" onclick="openModal('Kuva1.jpg', 'Josefina Nelimarkka: The Cloud of Un/Knowing, Amos Rex, 27.3.-8.9. Suosittelijana Anna')">Viikko 1</button>
+        <button class="grid-item" onclick="openModal('Kuva2.jpg', 'Maailma kylässä festivaali 25–26.5.')">Viikko 2</button>
+        <button class="grid-item" onclick="openModal('Kuva3.jpg', 'Helsinki Samba Carnaval 3–9.6.')">Viikko 3</button>
+        <button class="grid-item" onclick="openModal('Kuva4.jpg', 'Helsinki päivä 12.6.')">Viikko 4</button>
+        <button class="grid-item" onclick="openModal('Kuva5.jpg', 'Seurasaaren juhannusvalkeat 21.6.')">Viikko 5</button>
+        <button class="grid-item" onclick="openModal('Kuva6.jpg', 'Suomenlinnan kesäteatteri, Don Quijote, 6.6.–31.8.')">Viikko 6</button>
+        <button class="grid-item" onclick="openModal('Kuva7.jpg', 'Tall Ships Races Helsinki 2024 4–7.7.')">Viikko 7</button>
+        <button class="grid-item" onclick="openModal('Kuva8.jpg', 'Skatan eläinpäivät 13.7.')">Viikko 8</button>
+        <button class="grid-item" onclick="openModal('Kuva9.jpg', 'Suuret Oluet – Pienet Panimot festivaali, 17–20.7.')">Viikko 9</button>
+        <button class="grid-item" onclick="openModal('Kuva10.jpg', 'Luonnontieteellisen museon 100-vuotissyntymäpäivänäyttely: Juhlat metsässä, 3.6.–29.12.')">Viikko 10</button>
+        <button class="grid-item" onclick="openModal('Kuva11.jpg', 'Weekend Festival 2-3.8.')">Viikko 11</button>
+        <button class="grid-item" onclick="openModal('Kuva12.jpg', 'Flow Festival 9-11.8.')">Viikko 12</button>
+        <button class="grid-item" onclick="openModal('Kuva13.jpg', 'Helsingin juhlaviikot 15.8–1.9.')">Viikko 13</button>
+
+        <!-- Add more grid items as needed -->
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Kuva">
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script>
+        // Open modal with custom image and text
+        function openModal(imageSrc, text) {
+            var modal = document.getElementById('myModal');
+            var modalImg = document.getElementById('modal-image');
+            var modalText = document.getElementById('modal-text');
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+            modalText.innerHTML = text;
+        }
+
+        // Close the modal
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = "none";
+        }
+    </script>
+</body>
