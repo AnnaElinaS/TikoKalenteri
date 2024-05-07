@@ -17,7 +17,7 @@
     <h1>TIKO Kesäkalenteri</h1>
 
     <div class="grid-container">
-        <!-- Each grid item with customizable modal -->
+      
         <button class="grid-item" onclick="openModal('Kuva1.jpg', 'Josefina Nelimarkka: The Cloud of Un/Knowing, Amos Rex, 27.3.-8.9. Suosittelijana Anna')">Viikko 1</button>
         <button class="grid-item" onclick="openModal('Kuva2.jpg', 'Maailma kylässä festivaali 25–26.5.')">Viikko 2</button>
         <button class="grid-item" onclick="openModal('viikko3.jpg', 'Helsinki Samba Carnaval 3–9.6. Suosittelijana Ulduz')">Viikko 3</button>
@@ -32,10 +32,9 @@
         <button class="grid-item" onclick="openModal('Kuva12.jpg', 'Flow Festival 9-11.8.')">Viikko 12</button>
         <button class="grid-item" onclick="openModal('Kuva13.jpg', 'Helsingin juhlaviikot 15.8–1.9.')">Viikko 13</button>
 
-        <!-- Add more grid items as needed -->
     </div>
 
-    <!-- Modal -->
+    <!-- Modaali -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -45,7 +44,7 @@
     </div>
 
     <script>
-        // Open modal with custom image and text
+        // Modaalin avaaminen kuvalla ja tekstillä
         function openModal(imageSrc, text) {
             var modal = document.getElementById('myModal');
             var modalImg = document.getElementById('modal-image');
@@ -55,7 +54,7 @@
             modalText.innerHTML = text;
         }
 
-        // Close the modal
+        // Modaalin sulku
         function closeModal() {
             var modal = document.getElementById('myModal');
             modal.style.display = "none";
